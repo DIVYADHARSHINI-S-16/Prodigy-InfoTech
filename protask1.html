@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prodigy InfoTech</title>
+  <link rel="icon" href="https://media.licdn.com/dms/image/v2/D4D0BAQEMRfX2ouW2lw/company-logo_200_200/company-logo_200_200/0/1727855093948/prodigy_infotech_logo?e=2147483647&v=beta&t=yKzoYTxZSd47gGP9jF__ycnWkrjvAV6XJgAPU3vi2io" />
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+      padding: 12px 25px;
+      position: fixed;
+      width: 100%;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    }
+    .left {
+      display: flex;
+      align-items: center;
+    }
+    .img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+    .pro {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+    .nav-button {
+      margin-left: auto;
+    }
+    .nav-button button {
+      background-color: white;
+      border: none;
+      border-radius: 20px;
+      margin-right: 40px;
+      padding: 10px 16px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .nav-button button:hover {
+      background-color: #2c5364;
+      color: white;
+      border: 1px solid white;
+    }
+    section {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+      padding: 100px 20px 40px;
+      color: white;
+    }
+    #home {
+      background: linear-gradient(to right, #8360c3, #2ebf91);
+    }
+    #about {
+      background: linear-gradient(to right, #ff9966, #ff5e62);
+    }
+    #services {
+      background: linear-gradient(to right, #7f00ff, #e100ff);
+      color: white;
+    }
+    #contact {
+      background: linear-gradient(to right, #43cea2, #185a9d);
+      color: white;
+    }
+    h1 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+    p {
+      max-width: 700px;
+      font-size: 18px;
+      line-height: 1.6;
+    }
+    a {
+      color: #ffffff;
+      text-decoration: underline;
+    }
+    a:hover {
+      color: #000000;
+    }
+    @media screen and (max-width: 600px) {
+      .nav-button button {
+        margin: 5px 4px;
+        font-size: 12px;
+        padding: 8px 12px;
+      }
+      h1 {
+        font-size: 28px;
+      }
+      p {
+        font-size: 16px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="left">
+      <img class="img" src="https://media.licdn.com/dms/image/v2/D4D0BAQEMRfX2ouW2lw/company-logo_200_200/company-logo_200_200/0/1727855093948/prodigy_infotech_logo?e=2147483647&v=beta&t=yKzoYTxZSd47gGP9jF__ycnWkrjvAV6XJgAPU3vi2io" alt="Logo" />
+      <div class="pro">Prodigy Info Tech</div>
+    </div>
+    <div class="nav-button">
+      <button onclick="scrollToSection('home')">Home</button>
+      <button onclick="scrollToSection('about')">About</button>
+      <button onclick="scrollToSection('services')">Services</button>
+      <button onclick="scrollToSection('contact')">Contact</button>
+    </div>
+  </div>
+
+  <section id="home">
+    <h1>Welcome to Prodigy InfoTech</h1>
+    <p>
+      Discover your potential with Prodigy InfoTech. We provide a dynamic platform for students and professionals to enhance their skills through practical experience, real-time projects, and expert guidance.
+    </p>
+  </section>
+
+  <section id="about">
+    <h1>About Us</h1>
+    <p>
+      Prodigy InfoTech is a leading platform offering virtual internships and project-based training in trending technologies. Our goal is to make tech education accessible, hands-on, and career-oriented.
+    </p>
+  </section>
+
+  <section id="services">
+    <h1>Our Services</h1>
+    <p>
+      💻 Web Development <br><br>
+      📊 Data Science<br><br>
+      ☁️ Cloud Computing<br><br>
+      🤖 Artificial Intelligence <br><br>
+      📱 App Development<br><br>
+    </p>
+  </section>
+
+  <section id="contact">
+    <h1>Contact Us</h1>
+    <p>
+      📧 Email: <a href="mailto:info@prodigyinfotech.dev">info@prodigyinfotech.dev</a> <br><br>
+      📞 Phone: <a href="tel:+919876543210">+91 98765 43210</a> <br><br>
+      🌐 LinkedIn: <a href="https://www.linkedin.com/company/prodigy-infotech" target="_blank">linkedin.com/company/prodigy-infotech</a><br><br>
+      📂 GitHub: <a href="https://github.com/Prodigy-InfoTech" target="_blank">github.com/Prodigy-InfoTech</a>
+    </p>
+  </section>
+
+  <script>
+    function scrollToSection(id) {
+      document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    }
+  </script>
+</body>
+</html>
