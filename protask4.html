@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio</title>
+  <style>
+    :root {
+      --bg-dark: #0e0e2c;
+      --text-light: #f0f0f0;
+      --primary: #8e2de2;
+      --secondary: #4a00e0;
+      --accent: #00c6ff;
+      --card-bg: #1a1a40;
+      --btn-bg: #8e2de2;
+      --btn-hover: #4a00e0;
+      --shadow: 0 5px 20px rgba(0, 0, 0, 0.4);
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+    }
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+    }
+    .header-container {
+      max-width: 1100px;
+      margin: auto;
+    }
+    header h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+      color: white;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #e0e0ff;
+    }
+    nav {
+      background: #14142a;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--text-light);
+      text-decoration: none;
+      padding: 1rem;
+      font-weight: 600;
+      transition: all 0.3s;
+    }
+    nav a:hover,
+    nav a.active {
+      color: var(--accent);
+      border-bottom: 2px solid var(--accent);
+    }
+    section {
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    h2 {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    .about p, .contact p {
+      font-size: 1.1rem;
+      line-height: 1.7;
+      margin-top: 0.5rem;
+    }
+    .skills, .projects, .certifications {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .skill, .project {
+      background: var(--card-bg);
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .skill:hover, .project:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+    }
+    .skill h3, .project h3 {
+      margin-bottom: 0.5rem;
+      color: var(--accent);
+    }
+    .project p {
+      margin-top: 0.3rem;
+    }
+    .btn {
+      display: inline-block;
+      background: var(--btn-bg);
+      color: white;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      text-decoration: none;
+      margin-top: 1rem;
+      transition: background 0.3s ease;
+    }
+    .btn:hover {
+      background: var(--btn-hover);
+    }
+    footer {
+      background: #111133;
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2.2rem;
+      }
+      nav {
+        flex-direction: column;
+      }
+      .skills, .projects, .certifications {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <!-- Removed image -->
+      <h1>Hi, I'm Divyadharshini </h1>
+      <p>A passionate Web Developer | Java Programmer | UI/UX Enthusiast</p>
+      <a href="#contact" class="btn">Let’s Connect</a>
+    </div>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>I'm Divyadharshini, currently pursuing my 2nd year in Computer Science with a CGPA of 8.7. I'm passionate about crafting intuitive and responsive web experiences using HTML, CSS, and JavaScript. Alongside web development, I have a strong foundation in Java programming and a deep interest in UI/UX design.</p>
+    <p> <strong>Education:</strong> B.Tech in Computer Science (2024–2028)<br>
+       <strong>Background:</strong> Experienced in frontend development and UI/UX principles.<br>
+        <strong>Professional Interests:</strong> Creating engaging UIs and continuously learning new technologies.</p>
+  </section>
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills">
+      <div class="skill"><h3>HTML</h3><p>Semantic structure & layouts</p></div>
+      <div class="skill"><h3>CSS</h3><p>Flexbox, Grid, Animations</p></div>
+      <div class="skill"><h3>JavaScript</h3><p>Interactivity & DOM</p></div>
+      <div class="skill"><h3>Java</h3><p>OOP, Data Structures</p></div>
+      <div class="skill"><h3>UI/UX</h3><p>Wireframes & Prototypes</p></div>
+      <div class="skill"><h3>Git</h3><p>Version control</p></div>
+    </div>
+  </section>
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Tic Tac Toe Game</h3>
+        <p>A fun 2-player game built using HTML, CSS, and JavaScript with game logic and replay option.</p>
+      </div>
+      <div class="project">
+        <h3>Responsive Landing Page</h3>
+        <p>A modern landing page layout with responsive design and call-to-action buttons.</p>
+      </div>
+      <div class="project">
+        <h3>Stopwatch Web App</h3>
+        <p>A simple stopwatch with start, stop, reset functionality built using vanilla JavaScript.</p>
+      </div>
+    </div>
+  </section>
+  <section id="certifications">
+    <h2>Certifications</h2>
+    <div class="certifications">
+      <div class="project"><h3>Introduction to Java</h3><p>Sololearn</p></div>
+      <div class="project"><h3>CRUD Operations in MongoDB</h3><p>MongoDB</p></div>
+      <div class="project"><h3>Frontend Development</h3><p>United Latino Students Association</p></div>
+      <div class="project"><h3>Relational to Document Model</h3><p>MongoDB</p></div>
+      <div class="project"><h3>Oracle Java Foundations</h3><p>Oracle</p></div>
+      <div class="project"><h3>MongoDB Basics for Students</h3><p>MongoDB</p></div>
+      <div class="project"><h3>Getting Started with Microsoft Excel</h3><p>Coursera</p></div>
+      <div class="project"><h3>Power BI Workshop</h3><p>United Latino Students Association</p></div>
+      <div class="project"><h3>Networking Basics</h3><p>Cisco Networking Academy</p></div>
+      <div class="project"><h3>Python Essentials 1</h3><p>Cisco Networking Academy</p></div>
+    </div>
+  </section>
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:divyadharshinis1610@example.com" style="color: var(--accent);">divyadharshinis1610@example.com</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/divyadharshini-s-85414b326/" style="color: var(--accent);" target="_blank">linkedin.com/in/divyadharshini-s</a></p>
+    <a href="mailto:divyadharshinis1610@example.com" class="btn">Send Email</a>
+  </section>
+  <footer>
+    <p>&copy; Divyadharshini S | All rights reserved.</p>
+  </footer>
+  <script>
+    const links = document.querySelectorAll("nav a");
+    links.forEach(link => {
+      link.addEventListener("click", () => {
+        links.forEach(l => l.classList.remove("active"));
+        link.classList.add("active");
+      });
+    });
+  </script>
+</body>
+</html>
